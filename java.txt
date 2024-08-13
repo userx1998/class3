@@ -1,0 +1,765 @@
+Program 1: Java Program to display student information using class and object
+class student
+{
+int USN=12345;
+String name="ABC";
+String dept="BCA";
+int sem=2;
+char div='D';
+}
+class pgm1
+{
+public static void main(String args[])
+{
+student s=new student();
+System.out.println("Student Information");
+System.out.println("USN="+s.USN);
+System.out.println("Name="+s.name);
+System.out.println("Department="+s.dept);
+System.out.println("Semester="+s.sem);
+System.out.println("division="+s.div);
+}
+}
+Program 2: Write a Java program to demonstrate different data types in Java.
+class pgm2
+{
+public static void main(String args[])
+{
+char a = 'G';
+int i = 89;
+byte b = 4;
+short s = 56;
+double d = 4.355453532;
+float f = 4.7333434f;
+long l = 12121;
+String n="RLSI";
+System.out.println("char: " + a);
+System.out.println("integer: " + i);
+System.out.println("byte: " + b);
+System.out.println("short: " + s);
+System.out.println("float: " + f);
+System.out.println("double: " + d);
+System.out.println("long: " + l);
+System.out.println("String: " + n);
+}
+}
+Program 3: Write a Java program to demonstrate type casting.
+public class pgm3
+{
+public static void main(String[] args)
+{
+int x = 7;
+long y = x;
+float z = y;
+double p=z;
+System.out.println("Before conversion, int value "+x);
+System.out.println("After conversion, long value "+y);
+System.out.println("After conversion, float value "+z);
+System.out.println("After conversion,double value "+p);
+}
+}
+Program 4: Write a Java program to display student grade using switch statements
+import java.util.Scanner;
+public class prg4 {
+public static void main(String[] args)
+{
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter grade from (A, B, C or F) : ");
+String str = scanner.next();
+char grade = str.charAt(0);
+switch (grade) {
+case 'A':
+System.out.println("Grade A - marks >=80");
+break;
+case 'B':
+System.out.println("Grade B - marks >=60");
+break;
+case 'C':
+System.out.println("Grade C - marks >=40");
+break;
+case 'F':
+System.out.println("Grade F - marks <40 FAIL");
+break;
+default :
+System.out.println("Invalid Grade");
+break;
+}
+}
+}
+Program 5: Write a Java Program to demonstrate default constructor
+class defcon
+{
+int id;
+String name;
+public void print()
+{
+System.out.println("Example of default constructor");
+System.out.println("I'D is : "+id);
+System.out.println("Name is : "+name);
+}
+}
+class defcon1
+{
+public static void main(String args[])
+{
+defcon d=new defcon();
+d.print();
+}
+}
+Program 6: Write a Java Program to demonstrate parameterized constructor
+class parac
+{
+int id;
+String name;
+parac(int i,String n)
+{
+id=i;
+name=n;
+}
+public void display()
+{
+System.out.println("Example of parameterized constructor");
+System.out.println("I'D is : "+id);
+System.out.println("Name is : "+name);
+}
+}
+class parac1
+{
+public static void main(String args[])
+{
+parac p=new parac(123,"Rohit");
+p.display();
+}
+}
+Program 7: Write a Java Program to demonstrate constructor overloading
+class cover
+{
+int id;
+String name;
+int age;
+cover(int i,String n)
+{
+id=i;
+name=n;
+}
+cover(int i,String n,int a)
+{
+id=i;
+name=n;
+age=a;
+}
+public void display()
+{
+System.out.println("Example of constructor overloading");
+System.out.println("I'D is : "+id);
+System.out.println("Name is : "+name);
+System.out.println("Age : "+age);
+}
+}
+class cover1
+{
+public static void main(String args[])
+{
+cover c=new cover(123,"Rohit");
+cover c1=new cover(222,"ABC",31);
+c.display();
+c1.display();
+}
+}
+Program 8: Write a Java Program to demonstrate method overloading by changing parameter list
+class metoverpara
+{
+public void add(int a,int b)
+{
+int c;
+c=a+b;
+System.out.println("Addition of two integer numbers is"+c);
+}
+public void add(int a,int b,int c)
+{
+double d;
+d=a+b+c;
+System.out.println("Addition of three integer numbers is"+d);
+}
+}
+class metoverpara1
+{
+public static void main(String args[])
+{
+metoverpara m=new metoverpara();
+System.out.println("Example of Method overloading by changing parameter list");
+m.add(10,20);
+m.add(10,20,30);
+}
+}
+Program 9: Write a Java Program to demonstrate method overloading by changing data types
+class metoverdata
+{
+public void add(int a,int b)
+{
+int c;
+c=a+b;
+System.out.println("Addition of two integer data type numbers is"+c);
+}
+public void add(double a,double b)
+{
+double c;
+c=a+b;
+System.out.println("Addition of two double data type numbers is"+c);
+}
+}
+class metoverdata1
+{
+public static void main(String args[])
+{
+metoverdata m=new metoverdata();
+System.out.println("Example of Mrthod overloading by changing data types");
+m.add(10,20);
+m.add(10.5,20.5);
+}
+}
+Program 10. Write a Java Program to demonstrate the concept of method overriding.
+class metride
+{
+public void print()
+{
+System.out.println("From base class");
+}
+}
+class metride1 extends metride
+{
+public void print()
+{
+System.out.println("From derived class");
+}
+public static void main(String args[])
+{
+metride1 m=new metride1();
+System.out.println("Example of Method Overriding");
+m.print();
+}
+}
+
+
+Program 1: Java Program to display student information using class and object
+class student
+{
+int USN=12345;
+String name="ABC";
+String dept="BCA";
+int sem=2;
+char div='D';
+}
+class pgm1
+{
+public static void main(String args[])
+{
+student s=new student();
+System.out.println("Student Information");
+System.out.println("USN="+s.USN);
+System.out.println("Name="+s.name);
+System.out.println("Department="+s.dept);
+System.out.println("Semester="+s.sem);
+System.out.println("division="+s.div);
+}
+}
+Program 2: Write a Java program to demonstrate different data types in Java.
+class pgm2
+{
+public static void main(String args[])
+{
+char a = 'G';
+int i = 89;
+byte b = 4;
+short s = 56;
+double d = 4.355453532;
+float f = 4.7333434f;
+long l = 12121;
+String n="RLSI";
+System.out.println("char: " + a);
+System.out.println("integer: " + i);
+System.out.println("byte: " + b);
+System.out.println("short: " + s);
+System.out.println("float: " + f);
+System.out.println("double: " + d);
+System.out.println("long: " + l);
+System.out.println("String: " + n);
+}
+}
+Program 3: Write a Java program to demonstrate type casting.
+public class pgm3
+{
+public static void main(String[] args)
+{
+int x = 7;
+long y = x;
+float z = y;
+double p=z;
+System.out.println("Before conversion, int value "+x);
+System.out.println("After conversion, long value "+y);
+System.out.println("After conversion, float value "+z);
+System.out.println("After conversion,double value "+p);
+}
+}
+Program 4: Write a Java program to display student grade using switch statements
+import java.util.Scanner;
+public class prg4 {
+public static void main(String[] args)
+{
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter grade from (A, B, C or F) : ");
+String str = scanner.next();
+char grade = str.charAt(0);
+switch (grade) {
+case 'A':
+System.out.println("Grade A - marks >=80");
+break;
+case 'B':
+System.out.println("Grade B - marks >=60");
+break;
+case 'C':
+System.out.println("Grade C - marks >=40");
+break;
+case 'F':
+System.out.println("Grade F - marks <40 FAIL");
+break;
+default :
+System.out.println("Invalid Grade");
+break;
+}
+}
+}
+Program 5: Write a Java Program to demonstrate default constructor
+class defcon
+{
+int id;
+String name;
+public void print()
+{
+System.out.println("Example of default constructor");
+System.out.println("I'D is : "+id);
+System.out.println("Name is : "+name);
+}
+}
+class defcon1
+{
+public static void main(String args[])
+{
+defcon d=new defcon();
+d.print();
+}
+}
+Program 6: Write a Java Program to demonstrate parameterized constructor
+class parac
+{
+int id;
+String name;
+parac(int i,String n)
+{
+id=i;
+name=n;
+}
+public void display()
+{
+System.out.println("Example of parameterized constructor");
+System.out.println("I'D is : "+id);
+System.out.println("Name is : "+name);
+}
+}
+class parac1
+{
+public static void main(String args[])
+{
+parac p=new parac(123,"Rohit");
+p.display();
+}
+}
+Program 7: Write a Java Program to demonstrate constructor overloading
+class cover
+{
+int id;
+String name;
+int age;
+cover(int i,String n)
+{
+id=i;
+name=n;
+}
+cover(int i,String n,int a)
+{
+id=i;
+name=n;
+age=a;
+}
+public void display()
+{
+System.out.println("Example of constructor overloading");
+System.out.println("I'D is : "+id);
+System.out.println("Name is : "+name);
+System.out.println("Age : "+age);
+}
+}
+class cover1
+{
+public static void main(String args[])
+{
+cover c=new cover(123,"Rohit");
+cover c1=new cover(222,"ABC",31);
+c.display();
+c1.display();
+}
+}
+Program 8: Write a Java Program to demonstrate method overloading by changing parameter list
+class metoverpara
+{
+public void add(int a,int b)
+{
+int c;
+c=a+b;
+System.out.println("Addition of two integer numbers is"+c);
+}
+public void add(int a,int b,int c)
+{
+double d;
+d=a+b+c;
+System.out.println("Addition of three integer numbers is"+d);
+}
+}
+class metoverpara1
+{
+public static void main(String args[])
+{
+metoverpara m=new metoverpara();
+System.out.println("Example of Method overloading by changing parameter list");
+m.add(10,20);
+m.add(10,20,30);
+}
+}
+Program 9: Write a Java Program to demonstrate method overloading by changing data types
+class metoverdata
+{
+public void add(int a,int b)
+{
+int c;
+c=a+b;
+System.out.println("Addition of two integer data type numbers is"+c);
+}
+public void add(double a,double b)
+{
+double c;
+c=a+b;
+System.out.println("Addition of two double data type numbers is"+c);
+}
+}
+class metoverdata1
+{
+public static void main(String args[])
+{
+metoverdata m=new metoverdata();
+System.out.println("Example of Mrthod overloading by changing data types");
+m.add(10,20);
+m.add(10.5,20.5);
+}
+}
+Program 10. Write a Java Program to demonstrate the concept of method overriding.
+class metride
+{
+public void print()
+{
+System.out.println("From base class");
+}
+}
+class metride1 extends metride
+{
+public void print()
+{
+System.out.println("From derived class");
+}
+public static void main(String args[])
+{
+metride1 m=new metride1();
+System.out.println("Example of Method Overriding");
+m.print();
+}
+}
+
+21.Write a Java Program to demonstrate the working of try, catch and finally block in exception handling.
+class ex
+{
+public static void main(String args[])
+{
+try
+{
+int data=100/0;
+System.out.println(data);
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+finally
+{
+System.out.println("Example of try, catch and finally");
+}
+}
+}
+22.Write a Java Program to demonstrate the working of multiple catch blocks.
+class ex
+{
+public static void main(String args[])
+{
+try
+{
+int []a={10,20,30,40,50};
+System.out.println(a[6]);
+}
+catch(ArrayIndexOutOfBoundsException e)
+{
+System.out.println("Array index exception occured");
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+finally
+{
+System.out.println("Example of multiple catch");
+}
+}
+}
+23.Write a Java Program to demonstrate the working of Nested try block.
+class nestedtry
+{
+public static void main(String args[])
+{
+try
+{
+try
+{
+int data=100/0;
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+try
+{
+int[] a={1,2,3,4,5};
+System.out.println(a[10]);
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+finally
+{
+System.out.println("Example of nested try");
+}
+}
+}
+24.Write a Java program to demonstrate the working of Throw keyword.
+class thr
+{
+public static void validate(int age)
+{
+if(age<18)
+{
+throw new ArithmeticException("Not eligible");
+}
+else
+{
+System.out.println("Eligible");
+}
+}
+public static void main(String args[])
+{
+validate(22);
+System.out.println("Example of throw");
+}
+}
+25. Write a Java Program to create and start a thread.
+class th extends Thread
+{
+public void run()
+{
+System.out.println("Thread is running");
+}
+public static void main(String args[])
+{
+th t=new th();
+t.start();
+}
+}
+26. Write a Java Program to demonstrate the working of Thread Priority
+class tpri extends Thread
+{
+public void run()
+{
+System.out.println("Inside Run method");
+}
+public static void main(String args[])
+{
+tpri t1=new tpri();
+tpri t2=new tpri();
+System.out.println("Default thread priorities");
+System.out.println("Thread 1 priority"+t1.getPriority());
+System.out.println("Thread 2 priority"+t2.getPriority());
+System.out.println("Max and Min thread priorities");
+t1.setPriority(MAX_PRIORITY);
+t2.setPriority(MIN_PRIORITY);
+System.out.println("Thread 1 priority"+t1.getPriority());
+System.out.println("Thread 2 priority"+t2.getPriority());
+t1.setPriority(2);
+t2.setPriority(9);
+System.out.println("After setting priority");
+System.out.println("Thread 1 priority"+t1.getPriority());
+System.out.println("Thread 2 priority"+t2.getPriority());
+System.out.println("Current runing thread is "+currentThread().getName());
+}
+}
+27. Write a Java Program to demonstrate working of join () method in threads.
+class join extends Thread
+{
+public void run()
+{
+for(int i=0;i<3;i++)
+{
+try
+{
+Thread.sleep(1000);
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+System.out.println(i);
+}
+}
+public static void main(String args[])
+{
+join j1=new join();
+join j2=new join();
+join j3=new join();
+j1.start();
+try
+{
+j1.join();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+j2.start();
+try
+{
+j2.join();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+j3.start();
+try
+{
+j3.join();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
+28. Write a Java Program to demonstrate the working of Thread Synchronization.
+class table
+{
+synchronized void printtable(int n)
+{
+for (int i=1;i<=5;i++)
+{
+System.out.println(n*i);
+try
+{
+Thread.sleep(1000);
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
+}
+class mythread1 extends Thread
+{
+table t;
+mythread1(table t)
+{
+this.t=t;
+}
+public void run()
+{
+t.printtable(2);
+}
+}
+class mythread2 extends Thread
+{
+table t;
+mythread2(table t)
+{
+this.t=t;
+}
+public void run()
+{
+t.printtable(5);
+}
+}
+class test{
+public static void main(String args[]){
+table obj = new table();//only one object
+mythread1 t1=new mythread1(obj);
+mythread2 t2=new mythread2(obj);
+t1.start();
+t2.start();
+}
+}
+
+29. Write a Java collections program to demonstrate ArrayList interface.
+import java.util.ArrayList;
+
+class arrl {
+  public static void main(String[] args) {
+    ArrayList<String> language = new ArrayList<>();
+
+    // add elements in the array list
+    language.add("Java");
+    language.add("RDBMS");
+    language.add("OS");
+    System.out.println("ArrayList: " + language);
+
+    // remove element from index 2
+    String str =  language.remove(2);
+    System.out.println("Updated ArrayList: " +  language);
+    System.out.println("Removed Element: " + str);
+  }
+}
+
+30. Write Java collections programs to demonstrate LinkedList interface.
+
+import java.util.*;
+class al
+{
+	public static void main(String args[])
+	{
+		LinkedList <String> list=new LinkedList <String>();
+		list.add("C");	
+		list.add("C++");
+		list.add("Web Programming");
+
+		Iterator itr=list.iterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}
+	}
+}
+
